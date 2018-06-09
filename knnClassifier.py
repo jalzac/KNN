@@ -16,3 +16,8 @@ test_data=pd.read_csv("/Users/juanalbertolahera/Projects/Kaggle/Titanic/input/te
 test_data=test_data.fillna(test_data.mean())
 test_data.head()
 test_data=test_data.values
+
+import matplotlib.pyplot as plt
+col=data["Survived"]
+plt.scatter( x=data["Fare"],y=data["Age"], c=col)
+plt.show()
